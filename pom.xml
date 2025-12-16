@@ -18,11 +18,10 @@
 
     <modules>
         <module>tcsr-framework-common</module>
+        <module>tcsr-framework-core</module>
         <module>tcsr-framework-mybatis</module>
         <module>tcsr-framework-redis</module>
-        <module>tcsr-framework-security</module>
         <module>tcsr-framework-web</module>
-        <module>tcsr-framework-core</module>
     </modules>
 
     <properties>
@@ -52,11 +51,6 @@
             <dependency>
                 <groupId>com.tcsr</groupId>
                 <artifactId>tcsr-framework-redis</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.tcsr</groupId>
-                <artifactId>tcsr-framework-security</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>

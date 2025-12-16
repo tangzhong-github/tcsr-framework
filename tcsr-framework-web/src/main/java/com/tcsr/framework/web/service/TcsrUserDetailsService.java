@@ -1,0 +1,25 @@
+package com.tcsr.framework.web.service;
+
+import com.tcsr.framework.web.provider.TcsrUserInfoProvider;
+import com.tcsr.framework.web.user.TcsrUserDetail;
+import com.tcsr.framework.web.user.UserDTO;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class TcsrUserDetailsService implements UserDetailsService {
+    
+    private final TcsrUserInfoProvider userInfoProvider;
+    
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        UserDTO user = userInfoProvider.getByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+        return new TcsrUserDetail(user);
+    }
+
+}
