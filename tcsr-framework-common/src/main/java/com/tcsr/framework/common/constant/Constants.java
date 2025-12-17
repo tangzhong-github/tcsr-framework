@@ -3,7 +3,8 @@ package com.tcsr.framework.common.constant;
 /**
  *
  * @author tangzhong
- * @since  2025-11-13 14:07
+ * @date   2025-11-13 14:07
+ * @since  V1.0.0.0
  */
 public class Constants {
 

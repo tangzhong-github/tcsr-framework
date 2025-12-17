@@ -4,11 +4,13 @@ import com.tcsr.framework.web.utils.SecurityUtils;
 import org.springframework.stereotype.Component;
 
 /**
+ * 权限服务判断
  * @author tangzhong
- * @since  2025-11-04 15:12
+ * @date   2025-11-04 15:12
+ * @since  V1.0.0.0
  */
-@Component("ss")
-public class SecurityService {
+@Component("sps")
+public class SecurityPermissionService {
 
     public boolean hasRole(String role) {
         return hasAnyRole(role);

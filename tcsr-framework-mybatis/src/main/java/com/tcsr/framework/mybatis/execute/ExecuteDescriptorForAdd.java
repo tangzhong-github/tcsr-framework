@@ -1,6 +1,6 @@
 package com.tcsr.framework.mybatis.execute;
 
-import com.tcsr.framework.mybatis.dto.ExecuteDTO;
+import com.tcsr.framework.mybatis.dto.BaseDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,11 +8,12 @@ import java.util.function.Consumer;
 
 /**
  * @author tangzhong
- * @since  2025-10-14 11:57
+ * @date   2025-10-14 11:57
+ * @since  V1.0.0.0
  */
 @Getter
 @Setter
-public class ExecuteDescriptorForAdd<E extends ExecuteDTO> extends ExecuteDescriptor {
+public class ExecuteDescriptorForAdd<E extends BaseDTO> extends ExecuteDescriptor {
 
     private E executeDTO;
 
@@ -23,7 +24,7 @@ public class ExecuteDescriptorForAdd<E extends ExecuteDTO> extends ExecuteDescri
 
     protected ExecuteDescriptorForAdd(){};
 
-    public static <E extends ExecuteDTO> ExecuteDescriptorForAdd<E> of(E executeDTO, Consumer<E> bizHandlerBeforeExecute, String...copyTags){
+    public static <E extends BaseDTO> ExecuteDescriptorForAdd<E> of(E executeDTO, Consumer<E> bizHandlerBeforeExecute, String...copyTags){
         ExecuteDescriptorForAdd<E> executeDescriptor = new ExecuteDescriptorForAdd<>();
         executeDescriptor.setExecuteDTO(executeDTO);
         executeDescriptor.setBizHandlerBeforeExecute(bizHandlerBeforeExecute);

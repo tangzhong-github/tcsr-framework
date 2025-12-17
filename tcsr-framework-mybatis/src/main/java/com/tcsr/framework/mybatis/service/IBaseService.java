@@ -7,7 +7,8 @@ import com.tcsr.framework.mybatis.entity.BaseEntity;
 /**
  *
  * @author tangzhong
- * @since  2025-10-28 10:51
+ * @date   2025-10-28 10:51
+ * @since  V1.0.0.0
  */
 public interface IBaseService<T extends BaseEntity> {
 

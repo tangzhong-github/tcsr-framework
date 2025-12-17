@@ -7,7 +7,8 @@ import java.time.LocalDateTime;
 
 /**
  * @author tangzhong
- * @since  2025-10-24 11:30
+ * @date   2025-10-24 11:30
+ * @since  V1.0.0.0
  */
 @Component
 public class LocalTimeMetadataProvider extends AbstractMetadataProvider<LocalDateTime> {

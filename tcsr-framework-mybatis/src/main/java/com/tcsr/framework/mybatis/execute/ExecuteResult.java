@@ -5,9 +5,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * CRUD 操作结果
+ * 业务执行结果
  * @author tangzhong
- * @since  2025-10-14 11:57
+ * @date   2025-10-14 11:57
+ * @since  V1.0.0.0
  */
 @Getter
 @Setter

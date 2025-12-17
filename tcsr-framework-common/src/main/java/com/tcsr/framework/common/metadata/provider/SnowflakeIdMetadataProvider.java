@@ -6,7 +6,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author tangzhong
- * @since  2025-10-24 11:30
+ * @date   2025-10-24 11:30
+ * @since  V1.0.0.0
  */
 @Component
 public class SnowflakeIdMetadataProvider extends AbstractMetadataProvider<Long> {

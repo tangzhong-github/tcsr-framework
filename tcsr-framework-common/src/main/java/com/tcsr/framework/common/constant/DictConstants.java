@@ -4,7 +4,8 @@ package com.tcsr.framework.common.constant;
  * 字典常量
  * 说明：字典范围(1001-1999)
  * @author tangzhong
- * @since  2025-08-28 11:44
+ * @date   2025-08-28 11:44
+ * @since  V1.0.0.0
  */
 public interface DictConstants {
 

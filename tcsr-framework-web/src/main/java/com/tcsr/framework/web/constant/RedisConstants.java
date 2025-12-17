@@ -2,7 +2,8 @@ package com.tcsr.framework.web.constant;
 
 /**
  * @author tangzhong
- * @since  2025-11-04 10:23
+ * @date   2025-11-04 10:23
+ * @since  V1.0.0.0
  */
 public class RedisConstants {
 

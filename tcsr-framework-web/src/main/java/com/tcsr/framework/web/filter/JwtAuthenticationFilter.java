@@ -25,8 +25,10 @@ import java.io.IOException;
 import java.util.Collections;
 
 /**
+ * JWT认证过滤器
  * @author tangzhong
- * @since  2025-11-03 15:50
+ * @date   2025-11-03 15:50
+ * @since  V1.0.0.0
  */
 @Slf4j
 @Component

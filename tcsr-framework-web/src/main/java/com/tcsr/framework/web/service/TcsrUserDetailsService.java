@@ -9,6 +9,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+/**
+ * 
+ * @author tangzhong
+ * @date   2025-11-04 15:12
+ * @since  V1.0.0.0
+ */
 @Service
 @RequiredArgsConstructor
 public class TcsrUserDetailsService implements UserDetailsService {

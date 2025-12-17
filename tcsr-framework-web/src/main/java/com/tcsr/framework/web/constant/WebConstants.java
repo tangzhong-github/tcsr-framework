@@ -3,7 +3,8 @@ package com.tcsr.framework.web.constant;
 /**
  *
  * @author tangzhong
- * @since  2025-11-03 15:25
+ * @date   2025-11-03 15:25
+ * @since  V1.0.0.0
  */
 public class WebConstants {
 

@@ -8,7 +8,8 @@ import java.util.Optional;
 /**
  *
  * @author tangzhong
- * @since  2025-11-03 10:44
+ * @date   2025-11-03 10:44
+ * @since  V1.0.0.0
  */
 public interface TcsrUserInfoProvider {
 

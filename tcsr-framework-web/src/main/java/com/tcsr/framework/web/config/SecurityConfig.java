@@ -17,6 +17,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+/**
+ *
+ * @author tangzhong
+ * @date   2025-08-28 15:41
+ * @since  V1.0.0.0
+ */
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity

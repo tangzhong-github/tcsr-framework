@@ -3,7 +3,8 @@ package com.tcsr.framework.common.response;
 /**
  * 响应码
  * @author tangzhong
- * @since  2025-12-12 10:11
+ * @date   2025-12-12 10:11
+ * @since  V1.0.0.0
  */
 public interface ResponseCodes {
 

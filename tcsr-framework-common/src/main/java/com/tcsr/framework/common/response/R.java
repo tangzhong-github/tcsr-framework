@@ -10,7 +10,8 @@ import java.io.Serializable;
  * Api 统一返回结果
  *
  * @author tangzhong
- * @since  2024-01-12
+ * @date   2024-01-12
+ * @since  V1.0.0.0
  */
 @Getter
 @Setter

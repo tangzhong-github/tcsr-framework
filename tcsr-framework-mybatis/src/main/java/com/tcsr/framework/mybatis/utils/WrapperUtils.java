@@ -7,7 +7,8 @@ import com.tcsr.framework.mybatis.entity.BaseEntity;
 /**
  *
  * @author tangzhong
- * @since  2025-08-28 16:11
+ * @date   2025-08-28 16:11
+ * @since  V1.0.0.0
  */
 public class WrapperUtils {
 

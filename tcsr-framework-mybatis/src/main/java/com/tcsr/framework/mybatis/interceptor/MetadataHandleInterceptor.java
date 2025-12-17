@@ -23,7 +23,8 @@ import java.util.Map;
 /**
  * 元数据处理拦截器
  * @author tangzhong
- * @since  2025-10-24 11:48
+ * @date   2025-10-24 11:48
+ * @since  V1.0.0.0
  */
 @Intercepts({
         @Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class}),

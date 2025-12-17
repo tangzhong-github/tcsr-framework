@@ -6,7 +6,8 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  *
  * @author tangzhong
- * @since  2025-10-24 11:34
+ * @date   2025-10-24 11:34
+ * @since  V1.0.0.0
  */
 public class MetadataProviderFactory {
 

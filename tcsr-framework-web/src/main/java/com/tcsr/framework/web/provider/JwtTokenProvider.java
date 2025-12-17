@@ -17,6 +17,12 @@ import org.springframework.util.StringUtils;
 import java.util.Date;
 import java.util.function.Function;
 
+/**
+ *
+ * @author tangzhong
+ * @date   2025-08-28 15:21
+ * @since  V1.0.0.0
+ */
 @Getter
 @Setter
 @Component

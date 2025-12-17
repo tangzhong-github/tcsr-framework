@@ -2,7 +2,8 @@ package com.tcsr.framework.common.validate;
 
 /**
  * @author tangzhong
- * @since  2025-12-16 10:02
+ * @date   2025-12-16 10:02
+ * @since  V1.0.0.0
  */
 public interface GroupEdit {
 

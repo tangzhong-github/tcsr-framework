@@ -2,7 +2,8 @@ package com.tcsr.framework.common.metadata;
 
 /**
  * @author tangzhong
- * @since  2025-12-15 16:15
+ * @date   2025-12-15 16:15
+ * @since  V1.0.0.0
  */
 public class MetadataTypeConstants {
 

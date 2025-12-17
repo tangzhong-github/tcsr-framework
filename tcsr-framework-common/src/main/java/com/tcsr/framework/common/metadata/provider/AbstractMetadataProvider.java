@@ -9,7 +9,8 @@ import java.util.function.Supplier;
 /**
  *
  * @author tangzhong
- * @since  2025-10-24 11:32
+ * @date   2025-10-24 11:32
+ * @since  V1.0.0.0
  */
 public abstract class AbstractMetadataProvider<T> implements MetadataProvider<T> {
 

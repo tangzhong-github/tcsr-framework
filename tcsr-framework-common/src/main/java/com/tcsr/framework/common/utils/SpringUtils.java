@@ -8,7 +8,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author tangzhong
- * @since  2025-09-28 15:50
+ * @date   2025-09-28 15:50
+ * @since  V1.0.0.0
  */
 @Primary
 @Component

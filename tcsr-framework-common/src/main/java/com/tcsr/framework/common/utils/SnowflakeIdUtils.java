@@ -9,7 +9,8 @@ import java.util.concurrent.ThreadLocalRandom;
  * 16位长度雪花ID生成器
  * 生成Long类型的16位ID，基于当前时间戳生成
  * @author tangzhong
- * @since  2025-08-27 15:16
+ * @date   2025-08-27 15:16
+ * @since  V1.0.0.0
  */
 public class SnowflakeIdUtils {
 
