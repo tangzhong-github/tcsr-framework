@@ -23,6 +23,6 @@ public class EditExecuteDescriptor<E extends BaseDTO> extends AddExecuteDescript
         executeDescriptor.setBizHandlerBeforeExecute(bizHandlerBeforeExecute);
         executeDescriptor.setCopyTags(copyTags);
         return executeDescriptor;
-    };
+    }
 
 }
