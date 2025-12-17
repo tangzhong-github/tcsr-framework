@@ -1,4 +1,4 @@
-package com.tcsr.framework.web.service.impl;
+package com.tcsr.framework.web.service;
 
 import com.tcsr.framework.web.provider.UserInfoProvider;
 import com.tcsr.framework.web.user.TcsrUserDetail;
