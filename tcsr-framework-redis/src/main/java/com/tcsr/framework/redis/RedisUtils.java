@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author tangzhong
  * @date   2025-09-28 15:45
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 public class RedisUtils {
 

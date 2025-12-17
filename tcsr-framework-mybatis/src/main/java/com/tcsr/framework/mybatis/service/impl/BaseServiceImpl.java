@@ -28,7 +28,7 @@ import java.util.function.Consumer;
  *
  * @author tangzhong
  * @date   2025-10-28 10:54
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> extends ServiceImpl<M, T> implements IBaseService<T> {
 

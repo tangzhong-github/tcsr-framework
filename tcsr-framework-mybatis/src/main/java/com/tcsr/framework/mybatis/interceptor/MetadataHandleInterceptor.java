@@ -1,7 +1,9 @@
 package com.tcsr.framework.mybatis.interceptor;
 
+import com.tcsr.framework.common.metadata.MetadataProvider;
 import com.tcsr.framework.common.metadata.MetadataProviderFactory;
 import com.tcsr.framework.common.metadata.MetadataTypeConstants;
+import com.tcsr.framework.common.utils.AssertUtils;
 import com.tcsr.framework.common.utils.ReflectionUtils;
 import com.tcsr.framework.mybatis.annotation.Metadata;
 import org.apache.ibatis.executor.Executor;
@@ -19,12 +21,13 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * 元数据处理拦截器
  * @author tangzhong
  * @date   2025-10-24 11:48
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 @Intercepts({
         @Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class}),
@@ -72,7 +75,9 @@ public class MetadataHandleInterceptor implements Interceptor {
                     if(MetadataTypeConstants.CONSTANT.equals(metadataType)){
                         value = metadataAnnotation.value();
                     }else{
-                        value = MetadataProviderFactory.get(metadataType).value();
+                        MetadataProvider<?> metadataProvider = MetadataProviderFactory.get(metadataType);
+                        AssertUtils.predicate(Objects::isNull, metadataProvider, String.format("未知的元数据Provider，元数据类型为[%s]，请联系管理员！", metadataType));
+                        value = metadataProvider.value();
                     }
                     metadataValueMap.put(field, value);
                 }

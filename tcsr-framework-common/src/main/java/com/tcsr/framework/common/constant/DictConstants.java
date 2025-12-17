@@ -5,7 +5,7 @@ package com.tcsr.framework.common.constant;
  * 说明：字典范围(1001-1999)
  * @author tangzhong
  * @date   2025-08-28 11:44
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 public interface DictConstants {
 

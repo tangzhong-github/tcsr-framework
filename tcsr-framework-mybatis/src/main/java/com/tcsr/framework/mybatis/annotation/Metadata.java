@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  *
  * @author tangzhong
  * @date   2025-08-29 14:06
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)

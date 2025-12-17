@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  *
  * @author tangzhong
  * @date   2025-08-27 14:52
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 @Getter
 @Setter

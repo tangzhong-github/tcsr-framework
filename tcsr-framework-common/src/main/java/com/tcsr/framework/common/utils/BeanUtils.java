@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 /**
  * @author tangzhong
  * @date   2025-08-28 16:25
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 public class BeanUtils extends org.springframework.beans.BeanUtils {
 

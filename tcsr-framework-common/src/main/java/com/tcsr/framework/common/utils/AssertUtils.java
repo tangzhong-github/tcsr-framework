@@ -9,7 +9,7 @@ import java.util.function.Supplier;
  * 断言工具类
  * @author tangzhong
  * @date   2025-08-28 16:19
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 public class AssertUtils {
 

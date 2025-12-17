@@ -21,7 +21,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
  *
  * @author tangzhong
  * @date   2025-08-28 15:41
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 @Configuration
 @EnableWebSecurity

@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author tangzhong
  * @date   2024-01-12
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 @Getter
 @Setter

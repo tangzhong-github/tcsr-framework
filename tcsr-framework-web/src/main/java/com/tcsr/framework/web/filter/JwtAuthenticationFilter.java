@@ -28,7 +28,7 @@ import java.util.Collections;
  * JWT认证过滤器
  * @author tangzhong
  * @date   2025-11-03 15:50
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 @Slf4j
 @Component

@@ -21,7 +21,7 @@ import java.util.function.Function;
  *
  * @author tangzhong
  * @date   2025-08-28 15:21
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 @Getter
 @Setter

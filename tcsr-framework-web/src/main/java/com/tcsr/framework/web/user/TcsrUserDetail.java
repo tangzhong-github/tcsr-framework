@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  *
  * @author tangzhong
  * @date   2025-11-07 11:05
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 @Setter
 @AllArgsConstructor

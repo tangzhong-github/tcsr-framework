@@ -3,7 +3,7 @@ package com.tcsr.framework.web.constant;
 /**
  * @author tangzhong
  * @date   2025-11-04 10:23
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 public class RedisConstants {
 

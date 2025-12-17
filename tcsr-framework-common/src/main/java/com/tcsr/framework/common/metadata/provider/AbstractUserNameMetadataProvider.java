@@ -8,7 +8,7 @@ import java.util.function.Supplier;
  *
  * @author tangzhong
  * @date   2025-10-24 11:30
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 public abstract class AbstractUserNameMetadataProvider extends AbstractMetadataProvider<String> {
 

@@ -4,7 +4,7 @@ package com.tcsr.framework.common.response;
  * 响应码
  * @author tangzhong
  * @date   2025-12-12 10:11
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 public interface ResponseCodes {
 

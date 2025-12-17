@@ -8,7 +8,7 @@ import org.springframework.context.i18n.LocaleContextHolder;
  * 国际化消息工具类
  * @author tangzhong
  * @date   2025-10-24 12:02
- * @since  V1.0.0.0
+ * @since  V1.0.0
  */
 //@Slf4j
 @RequiredArgsConstructor
