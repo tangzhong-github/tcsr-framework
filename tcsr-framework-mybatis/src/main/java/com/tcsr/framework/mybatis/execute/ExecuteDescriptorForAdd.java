@@ -1,6 +1,6 @@
 package com.tcsr.framework.mybatis.execute;
 
-import com.tcsr.framework.mybatis.dto.BaseDTO;
+import com.tcsr.framework.common.dto.BaseDTO;
 import lombok.Getter;
 import lombok.Setter;
 

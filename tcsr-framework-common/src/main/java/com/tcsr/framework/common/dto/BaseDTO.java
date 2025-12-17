@@ -1,4 +1,4 @@
-package com.tcsr.framework.mybatis.dto;
+package com.tcsr.framework.common.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

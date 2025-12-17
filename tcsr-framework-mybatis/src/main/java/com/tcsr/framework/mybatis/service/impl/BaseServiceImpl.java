@@ -9,7 +9,7 @@ import com.tcsr.framework.common.utils.BeanUtils;
 import com.tcsr.framework.common.utils.HttpServletUtils;
 import com.tcsr.framework.mybatis.api.Page;
 import com.tcsr.framework.mybatis.api.PageResult;
-import com.tcsr.framework.mybatis.dto.BaseDTO;
+import com.tcsr.framework.common.dto.BaseDTO;
 import com.tcsr.framework.mybatis.entity.BaseEntity;
 import com.tcsr.framework.mybatis.execute.ExecuteDescriptor;
 import com.tcsr.framework.mybatis.execute.ExecuteDescriptorForAdd;
