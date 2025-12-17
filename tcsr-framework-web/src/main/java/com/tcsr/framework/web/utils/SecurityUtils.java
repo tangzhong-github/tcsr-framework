@@ -1,5 +1,6 @@
 package com.tcsr.framework.web.utils;
 
+import com.tcsr.framework.common.constant.RoleKeyConstants;
 import com.tcsr.framework.web.user.TcsrUserDetail;
 import com.tcsr.framework.web.user.UserDTO;
 import org.springframework.security.core.Authentication;
@@ -33,6 +34,10 @@ public class SecurityUtils {
 
     public static List<String> getUserRoles(){
         return getAuthentication().map(TcsrUserDetail::getUser).map(UserDTO::getRoles).orElse(Collections.emptyList());
+    }
+
+    public static boolean isAdmin(){
+        return getUserRoles().contains(RoleKeyConstants.ROLE_ADMIN);
     }
 
 }

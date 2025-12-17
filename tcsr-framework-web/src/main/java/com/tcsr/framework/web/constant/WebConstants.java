@@ -14,5 +14,4 @@ public class WebConstants {
 
     public static final String AUTHORIZATION_STARTER = "Bearer ";
 
-    public static final String ROLE_ADMIN = "Admin";
 }
