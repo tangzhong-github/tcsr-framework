@@ -13,9 +13,9 @@ import java.util.function.Consumer;
  */
 @Getter
 @Setter
-public class ExecuteDescriptorForDelete extends ExecuteDescriptor {
+public class DeleteExecuteDescriptor extends ExecuteDescriptor {
 
-    private ExecuteDescriptorForDelete(){}
+    private DeleteExecuteDescriptor(){}
 
     private List<Long> ids;
 
@@ -23,12 +23,12 @@ public class ExecuteDescriptorForDelete extends ExecuteDescriptor {
 
     private Consumer<List<Long>> forceDeleteHandler;
 
-    public static ExecuteDescriptorForDelete of(List<Long> ids, Consumer<List<Long>> ordinaryBizHandler){
+    public static DeleteExecuteDescriptor of(List<Long> ids, Consumer<List<Long>> ordinaryBizHandler){
         return of(ids, ordinaryBizHandler, null);
     }
 
-    public static ExecuteDescriptorForDelete of(List<Long> ids, Consumer<List<Long>> ordinaryBizHandler, Consumer<List<Long>> forceDeleteBizHandler){
-        ExecuteDescriptorForDelete executeDescriptor = new ExecuteDescriptorForDelete();
+    public static DeleteExecuteDescriptor of(List<Long> ids, Consumer<List<Long>> ordinaryBizHandler, Consumer<List<Long>> forceDeleteBizHandler){
+        DeleteExecuteDescriptor executeDescriptor = new DeleteExecuteDescriptor();
         executeDescriptor.setIds(ids);
         executeDescriptor.setOrdinaryHandler(ordinaryBizHandler);
         executeDescriptor.setForceDeleteHandler(forceDeleteBizHandler);

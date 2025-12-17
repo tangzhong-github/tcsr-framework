@@ -11,10 +11,10 @@ import com.tcsr.framework.common.utils.HttpServletUtils;
 import com.tcsr.framework.mybatis.api.Page;
 import com.tcsr.framework.mybatis.api.PageResult;
 import com.tcsr.framework.mybatis.entity.BaseEntity;
+import com.tcsr.framework.mybatis.execute.AddExecuteDescriptor;
+import com.tcsr.framework.mybatis.execute.DeleteExecuteDescriptor;
+import com.tcsr.framework.mybatis.execute.EditExecuteDescriptor;
 import com.tcsr.framework.mybatis.execute.ExecuteDescriptor;
-import com.tcsr.framework.mybatis.execute.ExecuteDescriptorForAdd;
-import com.tcsr.framework.mybatis.execute.ExecuteDescriptorForDelete;
-import com.tcsr.framework.mybatis.execute.ExecuteDescriptorForEdit;
 import com.tcsr.framework.mybatis.execute.ExecuteResult;
 import com.tcsr.framework.mybatis.mapper.BaseMapper;
 import com.tcsr.framework.mybatis.service.IBaseService;
@@ -58,17 +58,17 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEnt
 
     @SuppressWarnings("all")
     protected ExecuteResult<T> execute(ExecuteDescriptor executeDescriptorDTO) {
-        if(executeDescriptorDTO instanceof ExecuteDescriptorForDelete deleteExecuteDescriptor){
+        if(executeDescriptorDTO instanceof DeleteExecuteDescriptor deleteExecuteDescriptor){
             return this.doDelete(deleteExecuteDescriptor);
-        } else if(executeDescriptorDTO instanceof ExecuteDescriptorForEdit editExecuteDescriptor){
+        } else if(executeDescriptorDTO instanceof EditExecuteDescriptor editExecuteDescriptor){
             return this.doEdit(editExecuteDescriptor);
-        } else if(executeDescriptorDTO instanceof ExecuteDescriptorForAdd addExecuteDescriptor){
+        } else if(executeDescriptorDTO instanceof AddExecuteDescriptor addExecuteDescriptor){
             return this.doAdd(addExecuteDescriptor);
         }
         return ExecuteResult.of(Boolean.FALSE);
     }
 
-    protected <E extends BaseDTO> ExecuteResult<T> doAdd(ExecuteDescriptorForAdd<E> executeDescriptor){
+    protected <E extends BaseDTO> ExecuteResult<T> doAdd(AddExecuteDescriptor<E> executeDescriptor){
         E executeDTO = executeDescriptor.getExecuteDTO();
         Optional.ofNullable(executeDescriptor.getBizHandlerBeforeExecute()).ifPresent(handler -> handler.accept(executeDTO));
         T entity = BeanUtils.copyBeanByTag(executeDTO, super.getEntityClass(), executeDescriptor.getCopyTags());
@@ -76,7 +76,7 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEnt
         return ExecuteResult.of(success, entity);
     }
 
-    protected <E extends BaseDTO> ExecuteResult<T> doEdit(ExecuteDescriptorForEdit<E> executeDescriptor){
+    protected <E extends BaseDTO> ExecuteResult<T> doEdit(EditExecuteDescriptor<E> executeDescriptor){
         E executeDTO = executeDescriptor.getExecuteDTO();
         Optional.ofNullable(executeDescriptor.getBizHandlerBeforeExecute()).ifPresent(handler -> handler.accept(executeDTO));
         T stock = super.getById(executeDTO.getId());
@@ -85,7 +85,7 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEnt
         return ExecuteResult.of(success, stock);
     }
 
-    protected ExecuteResult<T> doDelete(ExecuteDescriptorForDelete executeDescriptor){
+    protected ExecuteResult<T> doDelete(DeleteExecuteDescriptor executeDescriptor){
         //业务端是否指定强制删除
         boolean isAppointForceDelete = HttpServletUtils.getParameter("forceDelete", Boolean.class, Boolean.FALSE);;
         //校验：当前功能是否支持强制删除

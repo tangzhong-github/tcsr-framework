@@ -13,12 +13,19 @@ import java.util.function.Consumer;
  */
 @Getter
 @Setter
-public class ExecuteDescriptorForEdit<E extends BaseDTO> extends ExecuteDescriptorForAdd<E> {
+public class AddExecuteDescriptor<E extends BaseDTO> extends ExecuteDescriptor {
 
-    private ExecuteDescriptorForEdit(){}
+    private E executeDTO;
 
-    public static <E extends BaseDTO> ExecuteDescriptorForEdit<E> of(E executeDTO, Consumer<E> bizHandlerBeforeExecute, String...copyTags){
-        ExecuteDescriptorForEdit<E> executeDescriptor = new ExecuteDescriptorForEdit<>();
+    private Consumer<E> bizHandlerBeforeExecute;
+
+    /** 操作时的属性拷贝标识 */
+    private String[] copyTags;
+
+    protected AddExecuteDescriptor(){};
+
+    public static <E extends BaseDTO> AddExecuteDescriptor<E> of(E executeDTO, Consumer<E> bizHandlerBeforeExecute, String...copyTags){
+        AddExecuteDescriptor<E> executeDescriptor = new AddExecuteDescriptor<>();
         executeDescriptor.setExecuteDTO(executeDTO);
         executeDescriptor.setBizHandlerBeforeExecute(bizHandlerBeforeExecute);
         executeDescriptor.setCopyTags(copyTags);
