@@ -1,7 +1,7 @@
 package com.tcsr.framework.web.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tcsr.framework.common.response.R;
+import com.tcsr.framework.common.api.Response;
 import com.tcsr.framework.common.utils.MessageUtils;
 import com.tcsr.framework.web.user.TcsrUserDetail;
 import com.tcsr.framework.web.user.UserDTO;
@@ -79,7 +79,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
         response.setContentType("application/json;charset=UTF-8");
         ObjectMapper objectMapper = new ObjectMapper();
-        response.getWriter().write(objectMapper.writeValueAsString(R.fail(HttpStatus.UNAUTHORIZED.value(), message)));
+        response.getWriter().write(objectMapper.writeValueAsString(Response.fail(HttpStatus.UNAUTHORIZED.value(), message)));
     }
 
 }

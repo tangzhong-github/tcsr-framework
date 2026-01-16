@@ -1,4 +1,4 @@
-package com.tcsr.framework.common.response;
+package com.tcsr.framework.common.api;
 
 /**
  * 响应码

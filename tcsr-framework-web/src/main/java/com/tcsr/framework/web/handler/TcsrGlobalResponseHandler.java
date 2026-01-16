@@ -1,6 +1,6 @@
 package com.tcsr.framework.web.handler;
 
-import com.tcsr.framework.common.response.R;
+import com.tcsr.framework.common.api.Response;
 import com.tcsr.framework.web.annotation.SkipResponseWrapper;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -31,11 +31,11 @@ public class TcsrGlobalResponseHandler implements ResponseBodyAdvice<Object> {
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
         //如果已经是ApiResponse类型，则直接返回（一般为被异常处理器拦截处理完）
-        if(body instanceof R<?>){
+        if(body instanceof Response<?>){
             return body;
         }
         //统一封装返回结果
-        return R.success(body);
+        return Response.success(body);
     }
 
 }

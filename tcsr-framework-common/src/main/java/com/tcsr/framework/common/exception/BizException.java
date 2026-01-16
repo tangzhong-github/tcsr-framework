@@ -1,6 +1,6 @@
 package com.tcsr.framework.common.exception;
 
-import com.tcsr.framework.common.response.ResponseCodes;
+import com.tcsr.framework.common.api.ResponseCodes;
 import lombok.Getter;
 
 /**
