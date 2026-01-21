@@ -10,7 +10,6 @@
     </parent>
 
     <artifactId>tcsr-framework-mybatis</artifactId>
-    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>

@@ -10,7 +10,6 @@
     </parent>
 
     <artifactId>tcsr-framework-web</artifactId>
-    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
